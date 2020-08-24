@@ -77,9 +77,7 @@ public class LookifyController {
 	}
 	
 	@PostMapping("/search")
-	public String enviarArtista(@Valid
-								@ModelAttribute("cancion") Cancion cancion,
-								@RequestParam(value="artista") String artista) {
+	public String enviarArtista(@RequestParam(value="artista") String artista) {
 		return "redirect:/search/"+ artista;
 	}
 	
